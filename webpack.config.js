@@ -19,6 +19,7 @@ module.exports = {
             directory: path.join(__dirname, 'public'),
         },
         server: 'https',
+        host: '0.0.0.0',
         compress: true,
         port: 8086,
     }

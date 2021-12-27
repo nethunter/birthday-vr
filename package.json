@@ -21,6 +21,9 @@
   "dependencies": {
     "aframe-environment-component": "^1.3.1",
     "aframe-extras": "^6.1.1",
-    "aframe-particle-system-component": "^1.1.3"
+    "aframe-geometry-merger-component": "^2.0.0",
+    "aframe-particle-system-component": "^1.1.3",
+    "aframe-proxemic-component": "^0.0.19",
+    "super-hands": "^3.0.2"
   }
 }
