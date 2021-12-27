@@ -24,6 +24,7 @@
     "aframe-geometry-merger-component": "^2.0.0",
     "aframe-particle-system-component": "^1.1.3",
     "aframe-proxemic-component": "^0.0.19",
-    "super-hands": "^3.0.2"
+    "super-hands": "^3.0.2",
+    "three": "^0.136.0"
   }
 }

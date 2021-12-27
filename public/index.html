@@ -15,6 +15,24 @@
             <audio src="./happybirthday.mp3" id="happybirthday"></audio>
         </a-assets>
 
+        <!-- Camera -->
+        <a-entity id="rig" movement-controls="controls: checkpoint" checkpoint-controls="mode: animate" music-near-cake>
+            <a-camera look-controls="pointerLockEnabled: true">
+            </a-camera>
+            <a-entity laser-controls="hand: left" raycaster="objects: .links"></a-entity>
+            <a-entity laser-controls="hand: right" raycaster="objects: .links"></a-entity>
+        </a-entity>
+
+        <!-- Checkpoints -->
+        <a-cylinder checkpoint change-color-on-hover radius="0.5" height="0.01" position="6 0 -7" color="#FF0000"
+            class="links"></a-cylinder>
+        <a-cylinder checkpoint change-color-on-hover radius="0.5" height="0.01" position="0 0 0" color="#FF0000"
+            class="links"></a-cylinder>
+        <a-cylinder checkpoint change-color-on-hover radius="0.5" height="0.01" position="0 0 -7" color="#FF0000"
+            class="links" id="cake-checkpoint"></a-cylinder>
+        <a-cylinder checkpoint change-color-on-hover radius="0.5" height="0.01" position="-6 0 -7" color="#FF0000"
+            class="links"></a-cylinder>
+
         <a-entity geometry-merger="preserveOriginal: false">
             <!-- First block of tree -->
             <a-gltf-model src="#low-poly-tree" scale="0.91 0.91 0.91" position="8 0 -10"></a-gltf-model>
@@ -30,28 +48,12 @@
         </a-entity>
 
         <!-- The cake -->
+        <a-light type="point" color="pink" position="0 5 0"></a-light>
+        <a-entity ttf-text="text: Hello world" position="0 5 -13"></a-entity>
         <a-gltf-model id="cake" src="#birthday-cake" draggable scale="2 2 2" position="0 0 -13"
             sound="src: #happybirthday; on: proximityenter"></a-gltf-model>
+
         <a-entity environment="preset:  forest;  skyType:  atmosphere;  dressing:  stones;"></a-entity>
-        <a-light type="point" color="pink" position="0 5 0"></a-light>
-
-        <!-- Camera -->
-        <a-entity id="rig" movement-controls="controls: checkpoint" checkpoint-controls="mode: animate" music-near-cake>
-            <a-camera look-controls="pointerLockEnabled: true">
-            </a-camera>
-            <a-entity laser-controls="hand: left" raycaster="objects: .links"></a-entity>
-            <a-entity laser-controls="hand: right" raycaster="objects: .links"></a-entity>
-    </a-entity>
-
-        <!-- Checkpoints -->
-        <a-cylinder checkpoint change-color-on-hover radius="0.5" height="0.01" position="6 0 -7" color="#FF0000"
-            class="links"></a-cylinder>
-        <a-cylinder checkpoint change-color-on-hover radius="0.5" height="0.01" position="0 0 0" color="#FF0000"
-            class="links"></a-cylinder>
-        <a-cylinder checkpoint change-color-on-hover radius="0.5" height="0.01" position="0 0 -7" color="#FF0000"
-            class="links" id="cake-checkpoint"></a-cylinder>
-        <a-cylinder checkpoint change-color-on-hover radius="0.5" height="0.01" position="-6 0 -7" color="#FF0000"
-            class="links"></a-cylinder>
     </a-scene>
 </body>
 

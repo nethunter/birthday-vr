@@ -3,6 +3,7 @@ require('aframe-environment-component');
 require('aframe-extras');
 require('aframe-particle-system-component');
 require('super-hands');
+require('./components/ttf-text');
 
 AFRAME.registerComponent('music-near-cake', {
     init() {
@@ -20,20 +21,20 @@ AFRAME.registerComponent('music-near-cake', {
 
 AFRAME.registerComponent('change-color-on-hover', {
     schema: {
-      color: {default: '#ceceff'}
+        color: { default: '#ceceff' }
     },
 
     init: function () {
-      var data = this.data;
-      var el = this.el;  // <a-box>
-      var defaultColor = el.getAttribute('material').color;
+        var data = this.data;
+        var el = this.el;  // <a-box>
+        var defaultColor = el.getAttribute('material').color;
 
-      el.addEventListener('mouseenter', function () {
-        el.setAttribute('color', data.color);
-      });
+        el.addEventListener('mouseenter', function () {
+            el.setAttribute('color', data.color);
+        });
 
-      el.addEventListener('mouseleave', function () {
-        el.setAttribute('color', defaultColor);
-      });
+        el.addEventListener('mouseleave', function () {
+            el.setAttribute('color', defaultColor);
+        });
     }
-  });
+});

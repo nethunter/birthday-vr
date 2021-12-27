@@ -14,6 +14,9 @@ module.exports = {
             ]
         }),
     ],
+    resolve: {
+        modules: ['node_modules']
+    },
     devServer: {
         static: {
             directory: path.join(__dirname, 'public'),
