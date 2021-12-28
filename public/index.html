@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <a-scene fog stats cursor="rayOrigin: mouse">
+    <a-scene fog stats cursor="rayOrigin: mouse" renderer="foveationLevel: 2">
         <a-assets>
             <a-asset-item id="low-poly-tree" src="./models/low_poly_tree.glb"></a-asset-item>
             <a-asset-item id="low-poly-tree-2" src="./models/low_poly_tree_2.glb"></a-asset-item>
@@ -16,7 +16,7 @@
         </a-assets>
 
         <!-- Camera -->
-        <a-entity id="rig" movement-controls="controls: keyboard, touch, checkpoint; fly: true" checkpoint-controls="mode: animate" music-near-cake>
+        <a-entity id="rig" movement-controls="controls: keyboard, touch, gamepad, checkpoint; fly: true" checkpoint-controls="mode: animate" music-near-cake>
             <a-camera look-controls="pointerLockEnabled: true">
             </a-camera>
             <a-entity laser-controls="hand: left" raycaster="objects: .links"></a-entity>
